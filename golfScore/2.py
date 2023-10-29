@@ -10,3 +10,13 @@ while True:
             name = input(f"Input Player {i} Name: ")
             player_names.append(name)
         print("Player name(s): ", player_names)
+
+                # player names & scores to dictionary
+        for name in player_names:
+            score = int(input(f"Enter {name}'s score: "))
+            player_scores[name] = score
+        print(f" Player score(s): {player_scores}")
+
+    else:     
+        print("Invalid input, please input a valid number: ")
+        continue 
