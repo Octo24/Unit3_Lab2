@@ -11,12 +11,15 @@ while True:
             player_names.append(name)
         print("Player name(s): ", player_names)
 
-                # player names & scores to dictionary
+        # player names & scores to dictionary
         for name in player_names:
             score = int(input(f"Enter {name}'s score: "))
             player_scores[name] = score
-        print(f" Player score(s): {player_scores}")
+        print(f"Player score(s): {player_scores}")
 
-    else:     
-        print("Invalid input, please input a valid number: ")
+    else:
+        print("Invalid input, please enter a valid number of players (1 to 4): ")
         continue 
+
+    with open("golfScore/outputs.txt", "w") as output_counts:
+        output_counts.write(f"GOLF SCORES: {player_scores}")
